@@ -1,0 +1,28 @@
+{
+	"name": "Undiecar UI",
+	"version": "0.1",
+	"manifest_version": 2,
+	"description": "Replacement of the iRacing Beta UI",
+	"homepage_url": "https://geek.hellyer.kiwi/",
+ 	"browser_action": {
+			"default_icon": {
+				"16": "icons/icon16.png",
+				"48": "icons/icon48.png",
+				"128": "icons/icon128.png"
+			},
+			"default_title": "Undiecar UI"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://members.iracing.com/membersite/member/CreateHostedSessionBegin.do"
+			],
+			"js": [
+				"undiecar-ui.js"
+			]
+		}
+	]
+}
